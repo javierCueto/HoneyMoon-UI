@@ -15,6 +15,7 @@ struct HeaderView: View {
   let haptics = UINotificationFeedbackGenerator()
   
   var body: some View {
+    
     HStack {
       Button(action: {
         // ACTION
