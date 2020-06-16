@@ -9,12 +9,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: -  properties
+    @State var showAlert: Bool = false
+    @State var showGuide: Bool = false
+    @State var showInfo: Bool = false
+    
     var body: some View {
         VStack{
-            //HeaderView()
+            HeaderView(showGuideView: $showGuide, showInfoView: $showInfo)
             CardView(honeymoon: honeymoonData[1])
             .padding()
-            //FooterView()
+            FooterView(showBookingAlert: $showAlert)
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Success"), message: Text("Les desamos amor y el mas precioso tiempo para la pareja"), dismissButton: .default(Text("Feliz luna de miel")))
         }
         
     }

@@ -43,6 +43,7 @@ struct FooterView: View {
         .font(.system(size: 42, weight: .light))
     }
     .padding()
+    
   }
 }
 
