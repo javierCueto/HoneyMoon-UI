@@ -21,6 +21,11 @@
 		45BDDF232499438200925FF6 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDDF222499438200925FF6 /* InfoView.swift */; };
 		45BDDF252499439900925FF6 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDDF242499439900925FF6 /* GuideView.swift */; };
 		45BDDF27249943D300925FF6 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDDF26249943D300925FF6 /* PlaySound.swift */; };
+		45BDDF4924994B0C00925FF6 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDDF4824994B0C00925FF6 /* FooterView.swift */; };
+		45BDDF4C249951E900925FF6 /* HeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDDF4B249951E900925FF6 /* HeaderComponent.swift */; };
+		45BDDF4E2499521500925FF6 /* GuideComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDDF4D2499521500925FF6 /* GuideComponent.swift */; };
+		45BDDF51249956F800925FF6 /* TitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDDF50249956F800925FF6 /* TitleModifier.swift */; };
+		45BDDF532499571C00925FF6 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDDF522499571C00925FF6 /* ButtonModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,11 @@
 		45BDDF222499438200925FF6 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		45BDDF242499439900925FF6 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		45BDDF26249943D300925FF6 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		45BDDF4824994B0C00925FF6 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		45BDDF4B249951E900925FF6 /* HeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderComponent.swift; sourceTree = "<group>"; };
+		45BDDF4D2499521500925FF6 /* GuideComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideComponent.swift; sourceTree = "<group>"; };
+		45BDDF50249956F800925FF6 /* TitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleModifier.swift; sourceTree = "<group>"; };
+		45BDDF522499571C00925FF6 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,8 @@
 		45BDDF00249926A800925FF6 /* HoneyMoon UI */ = {
 			isa = PBXGroup;
 			children = (
+				45BDDF4F249956D600925FF6 /* Modifier */,
+				45BDDF4A249951B700925FF6 /* Component */,
 				45BDDF1C24993C7900925FF6 /* Data */,
 				45BDDF1924993BFC00925FF6 /* Model */,
 				45BDDF1D24993CEA00925FF6 /* View */,
@@ -119,8 +131,27 @@
 				45BDDF202499432C00925FF6 /* HeaderView.swift */,
 				45BDDF222499438200925FF6 /* InfoView.swift */,
 				45BDDF242499439900925FF6 /* GuideView.swift */,
+				45BDDF4824994B0C00925FF6 /* FooterView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		45BDDF4A249951B700925FF6 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				45BDDF4B249951E900925FF6 /* HeaderComponent.swift */,
+				45BDDF4D2499521500925FF6 /* GuideComponent.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		45BDDF4F249956D600925FF6 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				45BDDF50249956F800925FF6 /* TitleModifier.swift */,
+				45BDDF522499571C00925FF6 /* ButtonModifier.swift */,
+			);
+			path = Modifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,12 +226,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45BDDF4C249951E900925FF6 /* HeaderComponent.swift in Sources */,
 				45BDDF252499439900925FF6 /* GuideView.swift in Sources */,
 				45BDDF232499438200925FF6 /* InfoView.swift in Sources */,
 				45BDDF1824993BF000925FF6 /* HoneymoonModel.swift in Sources */,
 				45BDDF02249926A800925FF6 /* AppDelegate.swift in Sources */,
 				45BDDF04249926A800925FF6 /* SceneDelegate.swift in Sources */,
+				45BDDF4E2499521500925FF6 /* GuideComponent.swift in Sources */,
+				45BDDF51249956F800925FF6 /* TitleModifier.swift in Sources */,
 				45BDDF27249943D300925FF6 /* PlaySound.swift in Sources */,
+				45BDDF532499571C00925FF6 /* ButtonModifier.swift in Sources */,
+				45BDDF4924994B0C00925FF6 /* FooterView.swift in Sources */,
 				45BDDF1B24993C7300925FF6 /* HoneymoonData.swift in Sources */,
 				45BDDF1F24993D1E00925FF6 /* CardView.swift in Sources */,
 				45BDDF06249926A800925FF6 /* ContentView.swift in Sources */,
