@@ -15,18 +15,34 @@ struct ContentView: View {
     @State var showInfo: Bool = false
     
     @GestureState private var dragState = DragState.inactive
+    @State private var lastCardIndex: Int = 1
+    //@State private var cardRemovalTransition = AnyTransition.trailingBottom
     
     private var dragAreaThreshold: CGFloat = 65.0
     
     // MARK: -  cards views
     
-    var cardViews: [CardView] = {
+    @State var cardViews: [CardView] = {
         var views = [CardView]()
         for index in 0..<2 {
             views.append(CardView(honeymoon: honeymoonData[index]))
         }
         return views
     }()
+    
+    // MARK: -  move the card
+    private func moveCards() {
+        
+      cardViews.removeFirst()
+      
+      self.lastCardIndex += 1
+      
+      let honeymoon = honeymoonData[lastCardIndex % honeymoonData.count]
+      
+      let newCardView = CardView(honeymoon: honeymoon)
+      
+      cardViews.append(newCardView)
+    }
     
     // MARK: -  top card
     
@@ -117,6 +133,28 @@ struct ContentView: View {
                                 default:
                                     break
                                 }
+                            })/*.onChanged({ (value) in
+                              guard case .second(true, let drag?) = value else {
+                                return
+                              }
+                              
+                              if drag.translation.width < -self.dragAreaThreshold {
+                                self.cardRemovalTransition = .leadingBottom
+                              }
+                              
+                              if drag.translation.width > self.dragAreaThreshold {
+                                self.cardRemovalTransition = .trailingBottom
+                              }
+                            })*/
+                            .onEnded({ (value) in
+                              guard case .second(true, let drag?) = value else {
+                                return
+                              }
+                              
+                              if drag.translation.width < -self.dragAreaThreshold || drag.translation.width > self.dragAreaThreshold {
+                                playSound(sound: "sound-rise", type: "mp3")
+                                self.moveCards()
+                              }
                             })
                     )
                     
