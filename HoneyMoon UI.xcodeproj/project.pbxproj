@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		455C28E5249AC8C800A7C65F /* SymbolModifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455C28E4249AC8C800A7C65F /* SymbolModifer.swift */; };
 		45BDDF02249926A800925FF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDDF01249926A800925FF6 /* AppDelegate.swift */; };
 		45BDDF04249926A800925FF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDDF03249926A800925FF6 /* SceneDelegate.swift */; };
 		45BDDF06249926A800925FF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDDF05249926A800925FF6 /* ContentView.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		455C28E4249AC8C800A7C65F /* SymbolModifer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolModifer.swift; sourceTree = "<group>"; };
 		45BDDEFE249926A800925FF6 /* HoneyMoon UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HoneyMoon UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45BDDF01249926A800925FF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45BDDF03249926A800925FF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			children = (
 				45BDDF50249956F800925FF6 /* TitleModifier.swift */,
 				45BDDF522499571C00925FF6 /* ButtonModifier.swift */,
+				455C28E4249AC8C800A7C65F /* SymbolModifer.swift */,
 			);
 			path = Modifier;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				45BDDF51249956F800925FF6 /* TitleModifier.swift in Sources */,
 				45BDDF27249943D300925FF6 /* PlaySound.swift in Sources */,
 				45BDDF532499571C00925FF6 /* ButtonModifier.swift in Sources */,
+				455C28E5249AC8C800A7C65F /* SymbolModifer.swift in Sources */,
 				45BDDF4924994B0C00925FF6 /* FooterView.swift in Sources */,
 				45BDDF1B24993C7300925FF6 /* HoneymoonData.swift in Sources */,
 				45BDDF1F24993D1E00925FF6 /* CardView.swift in Sources */,

@@ -16,6 +16,8 @@ struct ContentView: View {
     
     @GestureState private var dragState = DragState.inactive
     
+    private var dragAreaThreshold: CGFloat = 65.0
+    
     // MARK: -  cards views
     
     var cardViews: [CardView] = {
@@ -87,6 +89,19 @@ struct ContentView: View {
                 ForEach(cardViews){ cardView in
                     cardView
                         .zIndex(self.isTopCard(cardView: cardView) ? 1 : 0)
+                        .overlay(
+                            ZStack{
+                                // X-MARK SYMBOL
+                                Image(systemName: "x.circle")
+                                    .modifier(SymbolModifier())
+                                    .opacity(self.dragState.translation.width < -self.dragAreaThreshold && self.isTopCard(cardView: cardView) ? 1.0 : 0.0)
+                                
+                                // HEART SYMBOL
+                                Image(systemName: "heart.circle")
+                                    .modifier(SymbolModifier())
+                                    .opacity(self.dragState.translation.width > self.dragAreaThreshold && self.isTopCard(cardView: cardView) ? 1.0 : 0.0)
+                            }
+                    )
                         .offset(x : self.isTopCard(cardView: cardView) ? self.dragState.translation.width : 0, y: self.isTopCard(cardView: cardView) ? self.dragState.translation.height : 0)
                         .scaleEffect(self.dragState.isDragging && self.isTopCard(cardView: cardView)  ? 0.85: 1.0)
                         .rotationEffect(Angle(degrees: self.isTopCard(cardView: cardView) ?  Double(self.dragState.translation.width / 12) : 0))
@@ -113,8 +128,8 @@ struct ContentView: View {
             Spacer()
             // MARK: -  footer
             FooterView(showBookingAlert: $showAlert)
-            .opacity(dragState.isDragging ? 0.0 : 1.0)
-            .animation(.default)
+                .opacity(dragState.isDragging ? 0.0 : 1.0)
+                .animation(.default)
         }
         .alert(isPresented: $showAlert) {
             Alert(
