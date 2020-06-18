@@ -10,6 +10,16 @@ import SwiftUI
 
 var honeymoonData: [Destination] = [
   Destination(
+     place: "Playa Balandra BCS",
+     country: "México",
+     image: "balandra"
+   ),
+    Destination(
+    place: "Arco Los Cabos BCS",
+    country: "México",
+    image: "loscabos"
+  ),
+    Destination(
     place: "Veligandu",
     country: "Maldives",
     image: "photo-veligandu-island-maldives"

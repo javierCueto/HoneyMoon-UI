@@ -26,9 +26,11 @@ struct CardView: View, Identifiable {
             .overlay(
                 VStack(alignment: .center, spacing: 12) {
                     Text(honeymoon.place.uppercased())
+                      
                         .foregroundColor(Color.white)
                         .font(.largeTitle)
                         .fontWeight(.bold)
+                          .multilineTextAlignment(TextAlignment.center)
                         .shadow(radius: 1)
                         .padding(.horizontal, 18)
                         .padding(.vertical, 4)

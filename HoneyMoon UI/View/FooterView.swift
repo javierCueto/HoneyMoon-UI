@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct FooterView: View {
-  // MARK: - PROPERTIES
+  // MARK: - properties
   @Binding var showBookingAlert: Bool
   let haptics = UINotificationFeedbackGenerator()
   
