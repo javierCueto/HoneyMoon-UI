@@ -164,7 +164,7 @@ struct ContentView: View {
             
             
             Spacer()
-            // MARK: -  footer
+            // MARK: -  footer 
             FooterView(showBookingAlert: $showAlert)
                 .opacity(dragState.isDragging ? 0.0 : 1.0)
                 .animation(.default)
