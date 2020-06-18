@@ -56,7 +56,7 @@ struct ContentView: View {
     
     
     
-    // MARK: - DRAG STATES
+    // MARK: - drag states
     
     enum DragState {
         case inactive
