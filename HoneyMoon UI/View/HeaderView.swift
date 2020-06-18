@@ -18,7 +18,7 @@ struct HeaderView: View {
     
     HStack {
       Button(action: {
-        // ACTION
+        // action
         playSound(sound: "sound-click", type: "mp3")
         self.haptics.notificationOccurred(.success)
         self.showInfoView.toggle()

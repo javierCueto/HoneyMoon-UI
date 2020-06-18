@@ -15,7 +15,7 @@ var honeymoonData: [Destination] = [
      image: "balandra"
    ),
     Destination(
-    place: "Arco Los Cabos BCS",
+    place: "Los Cabos BCS",
     country: "México",
     image: "loscabos"
   ),
